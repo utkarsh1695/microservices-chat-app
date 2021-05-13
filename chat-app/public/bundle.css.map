@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://chat-app/./src/containers/HomePage/index.scss"],"names":[],"mappings":"AAAA;EACE,UAAU;AACZ,C","file":"bundle.css","sourcesContent":[".container {\n  color: red;\n}"],"sourceRoot":""}

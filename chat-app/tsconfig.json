@@ -7,7 +7,7 @@
     "forceConsistentCasingInFileNames": true,
     "module": "commonjs",
     "paths": {
-      "#root/*": ["./src/*"]
+      // "#root/*": ["./src/*"]
     },
     "skipLibCheck": true,
     "strict": true,

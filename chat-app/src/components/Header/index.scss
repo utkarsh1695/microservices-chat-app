@@ -1,0 +1,6 @@
+@import "../../commonStyles/_variables.scss";
+
+.container {
+  @include wH(100vw, $HeaderHeight);
+  background-color: $HeaderBG;
+}

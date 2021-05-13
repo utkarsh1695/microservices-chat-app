@@ -4,7 +4,7 @@ require("@babel/register")({
       "css-modules-transform",
       {
         extensions: [".css", ".scss"],
-        generateScopedName: '[name]__[local]'
+        generateScopedName: '[folder]__[local]'
       }
     ]
   ],

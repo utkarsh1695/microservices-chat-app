@@ -6,7 +6,7 @@ import styles from "./index.scss";
 import { useStateDispatch, useStateSelector } from '../../store/hooks';
 import { testAction } from './actions';
 
-const HomePage = () => {
+const HomeContainer = () => {
   const dispatch = useStateDispatch();
   const homeData = useStateSelector(state => state?.home, shallowEqual);
 
@@ -19,4 +19,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default HomeContainer;

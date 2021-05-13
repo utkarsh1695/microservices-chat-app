@@ -1,5 +1,5 @@
-import { combineReducers, Dispatch } from "redux";
-import HomeReducer from "../containers/HomePage/reducer";
+import { combineReducers } from "redux";
+import HomeReducer from "../containers/HomeContainer/reducer";
 
 const Reducers = combineReducers({
   home: HomeReducer

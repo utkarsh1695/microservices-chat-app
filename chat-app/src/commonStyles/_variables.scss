@@ -1,0 +1,14 @@
+$LayoutBG: rgb(205, 205, 205);
+$HeaderBG: rgb(168, 175, 245);
+
+
+
+$HeaderHeight: 56px;
+
+
+
+
+@mixin wH($w, $h) {
+  width: $w;
+  height: $h;
+}

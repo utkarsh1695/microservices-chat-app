@@ -1,5 +1,11 @@
-.index__container {
-  color: red;
-}
+.HomeContainer__container{color:black}
+
+.Footer__container{background-color:blue}
+
+.Header__container{width:100vw;height:56px;background-color:#a8aff5}
+
+.Layout__container{width:100vw;height:100vh;background-color:#cdcdcd}.Layout__container button{color:red}
+
+
 
 /*# sourceMappingURL=bundle.css.map*/

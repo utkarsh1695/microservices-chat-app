@@ -24,12 +24,11 @@ module.exports = {
             loader: "css-loader",
             options: {
               modules: {
-              localIdentName: "[name]__[local]"
+              localIdentName: "[folder]__[local]"
               }
             }
           },
-          // "css-loader",
-          // 'sass-loader'
+          'sass-loader'
         ]
       },
       {

@@ -1,10 +1,10 @@
-import HomePage from "../containers/HomePage";
+import Home from "../views/Home";
 
 const routeConfig = [
   {
     path: '/',
     exact: true,
-    component: HomePage,
+    component: Home,
   }
 ];
 

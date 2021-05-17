@@ -7,9 +7,7 @@ const getHtmlToRender = (content: string) => {
     .replace(
       '<div id="root"></div>',
       `<div id="root">${content}</div>
-      <script>
-        window.__PRELOADED_STATE__ = ${JSON.stringify({})}
-      </script>
+      <script>window.__PRELOADED_STATE__ = ${JSON.stringify({})}</script>
     `);
   return finalHtml;
 };

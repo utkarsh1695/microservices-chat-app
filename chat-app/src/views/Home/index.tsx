@@ -1,11 +1,11 @@
-import React from 'react'
-import HomeContainer from '../../containers/HomeContainer';
+import React from 'react';
+import ChatListing from '../../containers/ChatListing';
 import Layout from '../../Layout';
 
 const Home = () => {
   return (
-    <Layout>
-      <HomeContainer />
+    <Layout pageTitle={'Chat App'}>
+      <ChatListing />
     </Layout>
   )
 }

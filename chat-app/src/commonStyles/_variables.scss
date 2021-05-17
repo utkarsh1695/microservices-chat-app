@@ -1,14 +1,25 @@
-$LayoutBG: rgb(205, 205, 205);
-$HeaderBG: rgb(168, 175, 245);
+$White: white;
+$Black: black;
+$LayoutBG: white;
+$HeaderBG: rgb(80, 87, 81);
+$BorderBG: rgb(215, 215, 215);
 
 
 
-$HeaderHeight: 56px;
+$HeaderHeight: 58px;
+$HeaderTitleSize: 20px;
+$HeaderTitleColor: $White;
+$HeaderTitleWeight: 400;
 
 
 
+@mixin widthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
 
-@mixin wH($w, $h) {
-  width: $w;
-  height: $h;
+@mixin fontStyle($text-size, $text-color, $text-weight) {
+  font-size: $text-size;
+  color: $text-color;
+  font-weight: $text-weight;
 }

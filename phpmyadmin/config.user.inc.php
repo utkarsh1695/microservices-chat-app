@@ -22,3 +22,5 @@
   $cfg['Servers'][$i]['user'] = 'root';
   $cfg['Servers'][$i]['password'] = 'password';
   $cfg['Servers'][$i]['AllowNoPassword'] = false;
+
+?>

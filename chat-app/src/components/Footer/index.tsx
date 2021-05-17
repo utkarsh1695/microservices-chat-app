@@ -3,9 +3,7 @@ import style from './index.scss';
 
 const Footer = () => {
   return (
-    <div className={style.container}>
-      
-    </div>
+    <div className={style.container} />
   )
 }
 

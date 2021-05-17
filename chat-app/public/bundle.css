@@ -1,11 +1,16 @@
-.HomeContainer__container{color:black}
-
 .Footer__container{background-color:blue}
 
-.Header__container{width:100vw;height:56px;background-color:#a8aff5}
+.Hamburger__container{background:transparent}.Hamburger__container .Hamburger__icon{position:relative;background-color:#fff;width:20px;height:2px}.Hamburger__container .Hamburger__icon::before{content:"";position:absolute;top:-8px;left:0;background-color:#fff;width:20px;height:2px;transition:all 0.3s ease-in-out}.Hamburger__container .Hamburger__icon::after{content:"";position:absolute;top:8px;left:0;background-color:#fff;width:20px;height:2px;transition:all 0.3s ease-in-out}.Hamburger__container .Hamburger__icon.Hamburger__cross{position:relative}.Hamburger__container .Hamburger__icon.Hamburger__cross.Hamburger__icon{background-color:transparent}.Hamburger__container .Hamburger__icon.Hamburger__cross::before{content:"";position:absolute;top:0;left:0;transform:rotate(45deg);width:20px;height:2px}.Hamburger__container .Hamburger__icon.Hamburger__cross::after{content:"";position:absolute;top:0;left:0;transform:rotate(-45deg);width:20px;height:2px}.Hamburger__container .Hamburger__dropdown{display:none;position:fixed;top:58px;right:0}.Hamburger__container .Hamburger__dropdown.Hamburger__show{display:block}.Hamburger__container .Hamburger__dropdown>div{background-color:#000;color:#fff;padding:5px 10px}
 
-.Layout__container{width:100vw;height:100vh;background-color:#cdcdcd}.Layout__container button{color:red}
+.Header__container{background-color:#505751;display:flex;justify-content:space-between;align-items:center;padding:20px 10px;box-shadow:0 0 5px 2px #505751}.Header__container .Header__title{font-size:20px;color:#fff;font-weight:400}.Header__container .Header__content .Header__search,.Header__container .Header__content .Header__menu{width:24px}
 
+.Layout__container{width:100vw;height:100vh;background-color:#fff}
+
+.ChatListing__container{color:black}
+
+.ChatListItem__container{padding:20px 10px;border-bottom:1px solid #d7d7d7;display:flex;align-items:center}.ChatListItem__container.ChatListItem__last{border-bottom:none}.ChatListItem__container .ChatListItem__icon{padding:20px;background-color:#fff;border:1px solid #d7d7d7;border-radius:8px}.ChatListItem__container .ChatListItem__title{margin-left:16px;font-size:16px;color:#000;font-weight:400}
+
+body{margin:0;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;width:100vw;height:100vh}
 
 
 /*# sourceMappingURL=bundle.css.map*/

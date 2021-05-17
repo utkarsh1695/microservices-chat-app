@@ -1,18 +1,18 @@
 import React from 'react';
 import Footer from '../components/Footer';
-import Header from '../components/Header';
+import Header from '../containers/Header';
 
 import style from "./index.scss";
 
 interface ILayoutProps {
+  pageTitle: string;
   children?: React.ReactNode
 }
 
-const Layout: React.FunctionComponent = ({ children }: ILayoutProps) => {
+const Layout = ({ children, pageTitle }: ILayoutProps) => {
   return (
     <div className={style.container}>
-      <button>Test Button</button>
-      <Header />
+      <Header title={pageTitle} />
       {children}
       <Footer />
     </div>

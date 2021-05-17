@@ -1,0 +1,75 @@
+@import "../../commonStyles/_variables.scss";
+
+.container {
+  background: transparent;
+
+  .icon {
+    position: relative;
+    background-color: $White;
+    @include widthHeight(20px, 2px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 0;
+      background-color: $White;
+      @include widthHeight(20px, 2px);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      background-color: $White;
+      @include widthHeight(20px, 2px);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &.cross {
+      position: relative;
+
+      &.icon {
+        background-color: transparent;
+      }
+  
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(45deg);
+        @include widthHeight(20px, 2px);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(-45deg);
+        @include widthHeight(20px, 2px);
+      }
+    }
+  }
+
+
+  .dropdown {
+    display: none;
+    position: fixed;
+    top: $HeaderHeight;
+    right: 0;
+
+    &.show {
+      display: block;
+    }
+
+    > div {
+      background-color: $Black;
+      color: $White;
+      padding: 5px 10px;
+    }
+  }
+}

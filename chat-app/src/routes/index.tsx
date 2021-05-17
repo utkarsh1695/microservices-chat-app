@@ -1,16 +1,15 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import routeConfig from "./routeConfig";
+import { Route, Switch } from "react-router-dom";
+import { ROUTES } from "../constants/common";
+import Chat from "../views/Chat";
+import Home from "../views/Home";
 
 const Routes = () => {
   return (
-    <>
-      {
-        routeConfig.map(({ path, component, exact }, index) => (
-          <Route key={`__${path}:${index}__`} {...{ path, component, exact }} />
-        ))
-      }
-    </>
+    <Switch>
+      <Route exact path={ROUTES.CHAT_LISTING} component={Home} />
+      <Route path={ROUTES.CHAT_WINDOW} component={Chat} />
+    </Switch>
   )
 };
 

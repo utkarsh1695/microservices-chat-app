@@ -3,7 +3,7 @@ import AppOnServer from "./appOnServer";
 
 const server = express();
 
-server.get("/", (req: Request, res: Response) => {
+server.get("*", (req: Request, res: Response) => {
   res.send(AppOnServer());
 });
 

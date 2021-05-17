@@ -1,10 +1,6 @@
 @import "../commonStyles/_variables.scss";
 
 .container {
-  @include wH(100vw, 100vh);
+  @include widthHeight(100vw, 100vh);
   background-color: $LayoutBG;
-
-  button {
-    color: red;
-  }
 }

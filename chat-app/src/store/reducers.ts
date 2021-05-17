@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import HomeReducer from "../containers/HomeContainer/reducer";
+import ChatReducer from "../containers/ChatListing/reducer";
 
 const Reducers = combineReducers({
-  home: HomeReducer
+  chat: ChatReducer
 });
 
 export default Reducers;

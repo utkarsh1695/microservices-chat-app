@@ -1,17 +1,54 @@
 @import "../../commonStyles/_variables.scss";
 
 .container {
+  position: relative;
+  padding: 10px 6px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 
-  textarea {
+  .placeholder {
+    position: absolute;
+    left: 8px;
+    top: 15px;
+    @include fontStyle(16px, $Black, 500);
+    transition: all 0.3s ease-out;
+    z-index: 1;
+  }
+
+  input {
+    height: 25px;
+    border: none;
+    cursor: text;
+    border-bottom: 1px solid $BorderBG;
+    z-index: 2;
+    background: transparent;
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $FocusInputBorder;
+    }
+
+    &:focus + .placeholder {
+      top: 0;
+      @include fontStyle(10px, $Black, 500);
+    }
+  }
+
+  .errorText {
     display: block;
-    resize: none;
-    width: 99%;
-    @include fontStyle(16px, $Black, 400);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    line-height: 24px;
-    outline: none;
-    border: 1px solid $BorderBG;
+    @include fontStyle(12px, $Red, 500);
+  }
+
+  &.active {
+    .placeholder {
+      top: 0;
+      @include fontStyle(10px, $Black, 500);
+    }
+  }
+
+  &.error {
+    input {
+      border-bottom: 1px solid $Red;
+    }
   }
 }

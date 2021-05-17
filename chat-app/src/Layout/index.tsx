@@ -6,13 +6,14 @@ import style from "./index.scss";
 
 interface ILayoutProps {
   pageTitle: string;
-  children?: React.ReactNode
+  showMenu?: boolean;
+  children?: React.ReactNode;
 }
 
-const Layout = ({ children, pageTitle }: ILayoutProps) => {
+const Layout = ({ children, pageTitle, showMenu }: ILayoutProps) => {
   return (
     <div className={style.container}>
-      <Header title={pageTitle} />
+      <Header title={pageTitle} showMenu={showMenu} />
       {children}
       <Footer />
     </div>

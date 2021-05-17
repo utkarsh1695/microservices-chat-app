@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import style from './index.scss';
 import { useParams } from 'react-router';
-import Input from '../../components/Input';
+import Textarea from '../../components/Textarea';
 
 interface IRouteSlug {
   userId: string;
@@ -16,7 +16,7 @@ const ChatWindow = () => {
     <div className={style.container}>
       <div className={style.readingPane}>Hello</div>
       <div className={style.writingPane}>
-        <Input onInputChange={setMsg} placeholder={"Enter Message"} value={msg} />
+        <Textarea onInputChange={setMsg} placeholder={"Enter Message"} value={msg} />
       </div>
     </div>
   )

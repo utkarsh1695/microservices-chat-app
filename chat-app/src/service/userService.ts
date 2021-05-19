@@ -1,11 +1,15 @@
-import axios from "./axiosInstance";
+import AxiosInstance from "./axiosInstance";
 import { API_ENDPOINTS } from "../constants/common";
 
+const fetch = AxiosInstance.fetch
+
 const getUserList = async () => {
-  const response = await axios.get(API_ENDPOINTS.userList);
-  return response;
+  const response = await fetch.get(API_ENDPOINTS.userList);
+  return response?.data;
 };
 
-export default {
+const UserService = {
   getUserList
-};
+}
+
+export default UserService;

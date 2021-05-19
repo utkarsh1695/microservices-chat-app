@@ -1,20 +1,19 @@
-import React from 'react';
 import { AxiosError } from "axios";
 import { useHistory } from 'react-router';
-import axios from "../../service/axiosInstance";
-import requestInterceptor from './Interceptor/request';
-import { responseErrorInterceptor, responseInterceptor } from './Interceptor/response';
+import requestInterceptor from './interceptor/request';
+import { responseRejectInterceptor, responseInterceptor } from './interceptor/response';
+import AxiosInstance from "../../service/axiosInstance";
 
 const ApiInterceptor = () => {
   const history = useHistory();
 
-  axios.interceptors.request.use(requestInterceptor);
-  axios.interceptors.response.use(
+  AxiosInstance.fetch.interceptors.request.use(requestInterceptor);
+  AxiosInstance.fetch.interceptors.response.use(
     responseInterceptor,
-    (error: AxiosError) => responseErrorInterceptor(error, history)
+    (error: AxiosError) => responseRejectInterceptor(error, history)
   );
 
-  return <></>;
-};
+  return null;
+}
 
 export default ApiInterceptor;

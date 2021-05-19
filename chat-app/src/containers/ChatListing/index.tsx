@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
-import { shallowEqual } from 'react-redux';
+import { useEffect } from 'react';
+// import { shallowEqual } from 'react-redux';
 
 import styles from "./index.module.scss";
 
-import { useStateDispatch, useStateSelector } from '../../store/hooks';
-import { actionGetUserList, testAction } from './actions';
+import { useStateDispatch } from '../../store/hooks';
+import { actionGetUserList } from './actions';
 import ChatListItem from '../../components/ChatListItem';
 import { useHistory } from 'react-router-dom';
 import { ROUTES } from '../../constants/common';
@@ -20,11 +20,11 @@ const config = [
 const ChatListing = () => {
   const history = useHistory();
   const dispatch = useStateDispatch();
-  const chatData = useStateSelector(state => state?.chat, shallowEqual);
+  // const chatData = useStateSelector(state => state?.chat, shallowEqual);
 
   useEffect(() => {
     dispatch(actionGetUserList());
-  }, [])
+  }, [dispatch]);
 
   const testClick = (userId: string) => history.push(ROUTES.CHAT_WINDOW);
 

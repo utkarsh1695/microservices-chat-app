@@ -103,7 +103,7 @@ const setupRoutes = (app: Express) => {
     try {
       const user = await userRepository.find();
       if (!user) return next(new Error("No Users Found!"));
-      return res.status(401).json(user);
+      return res.send(user);
     } catch (err) {
       return next(err);
     }

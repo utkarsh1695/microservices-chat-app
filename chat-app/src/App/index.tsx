@@ -12,8 +12,8 @@ const App = () => {
   return (
     <Provider store={store}>
       <BrowserRouter basename={BASE_ROUTE}>
-        <Routes />
         <ApiInterceptor />
+        <Routes />
       </BrowserRouter>
     </Provider>
   )

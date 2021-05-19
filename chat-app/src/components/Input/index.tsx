@@ -17,12 +17,12 @@ const Input = ({
   validations,
   autoFocus = false
 }: IProps) => {
-  const [error, setError] = useState('');
+  const error = '';
   const [focus, setFocus] = useState(false);
 
   useEffect(() => {
     if (autoFocus) setFocus(true);
-  }, [])
+  }, [autoFocus])
 
   const validate = (value: string) => {
     let isValid = true;

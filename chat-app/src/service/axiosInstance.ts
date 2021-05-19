@@ -1,11 +1,18 @@
-import axios from "axios";
+import Axios from "axios";
 
 const BASE_URL = 'http://localhost:7101/';
 const TIMEOUT = 20000; // 20 seconds
 
-const instance = axios.create({
-  baseURL: BASE_URL,
-  timeout: TIMEOUT
-});
+class AxiosInstance {
+  static fetch = Axios.create({
+    baseURL: BASE_URL,
+    timeout: TIMEOUT,
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
 
-export default instance;
+}
+
+
+export default AxiosInstance;

@@ -1,0 +1,14 @@
+@import "../../commonStyles/_variables.scss";
+
+.container {
+  background: $ButtonBG;
+  color: $White;
+  padding: 8px 12px;
+  text-align: center;
+  margin-top: 20px;
+  box-shadow: 2px 2px 5px 1px $Shadow;
+
+  &.roundBorders {
+    border-radius: 4px;
+  }
+}

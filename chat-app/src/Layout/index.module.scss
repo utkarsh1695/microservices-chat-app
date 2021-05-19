@@ -1,0 +1,6 @@
+@import "../commonStyles/_variables.scss";
+
+.container {
+  @include widthHeight(100vw, 100vh);
+  background-color: $LayoutBG;
+}

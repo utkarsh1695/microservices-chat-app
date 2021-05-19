@@ -1,0 +1,29 @@
+$White: white;
+$Black: black;
+$LayoutBG: white;
+$HeaderBG: rgb(80, 87, 81);
+$BorderBG: rgb(215, 215, 215);
+$Red: rgba(255, 0, 0, 0.7);
+$Shadow: rgb(215, 215, 215);
+$FocusInputBorder: rgb(80, 87, 81);
+$ButtonBG: rgb(80, 87, 81);
+
+
+
+$HeaderHeight: 58px;
+$HeaderTitleSize: 20px;
+$HeaderTitleColor: $White;
+$HeaderTitleWeight: 400;
+
+
+
+@mixin widthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin fontStyle($text-size, $text-color, $text-weight) {
+  font-size: $text-size;
+  color: $text-color;
+  font-weight: $text-weight;
+}

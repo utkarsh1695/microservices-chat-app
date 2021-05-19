@@ -1,0 +1,17 @@
+@import "../../commonStyles/_variables.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+
+  textarea {
+    display: block;
+    resize: none;
+    width: 99%;
+    @include fontStyle(16px, $Black, 400);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 24px;
+    outline: none;
+    border: 1px solid $BorderBG;
+  }
+}

@@ -98,6 +98,17 @@ const setupRoutes = (app: Express) => {
     }
   });
 
+  // get all user list
+  app.get("/users/get-all", async (req, res, next) => {
+    try {
+      const user = await userRepository.find();
+      if (!user) return next(new Error("No Users Found!"));
+      return res.status(401).json(user);
+    } catch (err) {
+      return next(err);
+    }
+  })
+  
   // get existing user details
   app.get("/users/:userId", async (req, res, next) => {
     try {

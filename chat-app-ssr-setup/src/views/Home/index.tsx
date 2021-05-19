@@ -7,11 +7,6 @@ import Layout from '../../Layout';
 const Home = () => {
   return (
     <Layout pageTitle={'Chat App'}>
-      <Link
-        to={ROUTES.LOGIN}
-      >
-        LOGIN
-      </Link>
       <ChatListing />
     </Layout>
   )

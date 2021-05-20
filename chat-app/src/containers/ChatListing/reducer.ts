@@ -1,8 +1,9 @@
+import { User } from "../../types";
 import { ChatActions } from "./actionTypes";
 
 export interface ChatState {
   flag: boolean;
-  userList: Array<{}>;
+  userList: Array<User>;
 }
 
 const INITIAL_STATE: ChatState = {

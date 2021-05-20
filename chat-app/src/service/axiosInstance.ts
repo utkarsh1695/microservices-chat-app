@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-const BASE_URL = 'http://localhost:7101/';
+const BASE_URL = 'http://localhost:7000/';
 const TIMEOUT = 20000; // 20 seconds
 
 class AxiosInstance {

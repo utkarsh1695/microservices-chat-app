@@ -21,15 +21,21 @@ export default class UsersService {
     const body = await got.post(`${USERS_SERVICE_URI}/users`, { json: { username, password } }).json();
     return <User>body;
   }
-
+  
   static async createUserSession({ username, password }: { username: string, password: string }): Promise<UserSession | null> {
     const body = await got.post(`${USERS_SERVICE_URI}/sessions`, { json: { username, password } }).json();
     return <UserSession>body;
   }
-
+  
   static async deleteUserSession({ sessionId }: { sessionId: string }) {
     const body = await got.delete(`${USERS_SERVICE_URI}/sessions/${sessionId}`).json();
     return body;
+  }
+  
+  static async fetchAllUsers(): Promise<User | null> {
+    const body = await got.get(`${USERS_SERVICE_URI}/users/get-all`).json();
+    if (!body) return null;
+    return <User>body;
   }
 
   static async fetchUser({ userId }: { userId: string }): Promise<User | null> {

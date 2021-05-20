@@ -1,3 +1,8 @@
+export interface User {
+  username: string;
+}
+
+
 export type RegexValidatorReturnType = {
   valid: boolean;
   error: string;

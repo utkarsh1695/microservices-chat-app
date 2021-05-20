@@ -21,6 +21,7 @@ const schema = gql`
 
   type Query {
     userSession(me: Boolean!): UserSession
+    allUsers: [User!]!
   }
 `;
 
